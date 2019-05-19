@@ -1,0 +1,68 @@
+.Details-container {
+  text-align: center;
+}
+
+.Choose {
+  background: black;
+  color: white;
+  padding: 20px;
+}
+
+.Banner {
+  position: relative;
+}
+
+.Desc {
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+
+.Image-container {
+  width: 80%;
+  margin: auto;
+}
+
+.Image-container img {
+  width: 100%;
+}
+
+.Square-box img {
+  width: 50%;
+  height: 50%;
+  padding: 5px;
+}
+
+.Triangle-up {
+  width: 30px;
+  height: 15px;
+  border-bottom: solid 15px white;
+  border-left: solid 15px transparent;
+  border-right: solid 15px transparent;
+}
+
+@media only screen and (max-width: 767px) {
+  .Choose {
+    background: white;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  .Triangle-up {
+    border-bottom-color: black;
+  }
+
+  body {
+    background: black;
+  }
+
+  .Details-container {
+    background-image: linear-gradient(white 10%, black 0%);
+  }
+
+  .Desc {
+    top: 10%;
+  }
+}

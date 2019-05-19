@@ -1,0 +1,55 @@
+import React from "react";
+
+import { Link } from "react-scroll";
+
+import "../css/Hero.css";
+import "../css/Animation.css";
+
+import Slide from "./Slide";
+import Carousel from "./Carousel";
+import WaveCarousel from "./WaveCarousel";
+
+const HeroMobile = ({ data, slides, actions }) => {
+  let style = {
+    // marginLeft: scrollLeft
+  };
+  return (
+    <div className="Hero-section" id="hero">
+      <div className="Main-section">
+        <img
+          src={data.background}
+          key={data.background}
+          className="Fade-in Fade-in-long"
+          alt={data.title}
+        />
+        <div className="Main-content">
+          <h1 className="Title">the travel store</h1>
+          <WaveCarousel image={data.thumbnailSmall} actions={actions} />
+          <p className="Sub-Title">{data.title}</p>
+          <p>
+            {!(data.id === "initial") && (
+              <Link to="details" smooth={true} duration={500}>
+                <span className="Pointer Border-bottom">Explore</span>
+              </Link>
+            )}
+          </p>
+
+          <div className="Slides">
+            {slides.map((slide, index) => (
+              <Slide
+                key={index}
+                index={index}
+                id={slide.id}
+                image={slide.thumbnail}
+                actions={actions}
+                selected={slide.id === data.id ? "Selected" : ""}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default HeroMobile;

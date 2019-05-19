@@ -1,0 +1,72 @@
+@keyframes fade-in {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Fade-in {
+  -webkit-animation-name: fade-in; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1.5s; /* Safari 4.0 - 8.0 */
+  animation-name: fade-in;
+  animation-duration: 1.5s;
+}
+
+.Fade-in-long {
+  animation-duration: 3s;
+}
+
+@keyframes slide-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    height: translateY(0%);
+  }
+}
+
+.Slide-down {
+  -webkit-animation-name: slide-down; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
+  animation-name: slide-down;
+  animation-duration: 1s;
+}
+
+.Animating .Slide-down {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.Animating #details {
+  position: fixed;
+}
+
+.canvas-wrapper {
+  position: relative;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 50vh;
+}
+.canvas-wrapper canvas {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

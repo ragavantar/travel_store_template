@@ -1,0 +1,160 @@
+.Hero-section {
+  height: 100vh;
+  text-align: center;
+  background: black;
+}
+
+.Main-section {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  color: white;
+}
+
+.Main-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.Main-section img {
+  width: 100%;
+  height: 100%;
+}
+
+.Title {
+  padding-top: 20vh;
+}
+
+.Sub-Title {
+  margin-top: 10%;
+}
+
+p {
+  text-transform: uppercase;
+  width: 80%;
+  margin: auto;
+}
+
+.Slides {
+  padding: 10%;
+}
+
+.Slide {
+  display: inline-block;
+  width: 14.2%;
+  padding: 5px;
+}
+
+.Slide div {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.Slide img {
+  width: 100%;
+}
+
+.Selected img {
+  transform: scale(1.15);
+}
+.Selected p {
+  border-bottom: 1px solid white;
+}
+
+.Border-bottom {
+  border-bottom: 1px solid white;
+}
+
+.Carousel-section {
+  position: relative;
+  height: 100%;
+  text-align: center;
+}
+
+.Carousel-section img {
+  width: 100%;
+  height: 100%;
+}
+
+.Carousel-section .Left-indicator {
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+.Carousel-section .Right-indicator {
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.Carousel-section p {
+  position: absolute;
+  top: 70%;
+  left: 10%;
+  width: 80%;
+  padding: 10px;
+  background: black;
+  color: white;
+  border: 1px solid white;
+  margin: auto;
+}
+
+.Triangle-left {
+  width: 15px;
+  height: 30px;
+  border-right: solid 15px white;
+  border-bottom: solid 15px transparent;
+  border-top: solid 15px transparent;
+}
+
+.Triangle-right {
+  width: 15px;
+  height: 30px;
+  border-left: solid 15px white;
+  border-bottom: solid 15px transparent;
+  border-top: solid 15px transparent;
+}
+
+.Pointer {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  .Hero-section {
+    color: white;
+  }
+  .Title {
+    padding-top: 5%;
+  }
+
+  .Carousel-section {
+    height: auto;
+    margin: 15px;
+  }
+  .Carousel-section img {
+    width: 80%;
+  }
+  .Carousel-section p {
+    display: none;
+  }
+
+  .Slides {
+    padding: 5% 10px;
+    overflow: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+  .Slides::-webkit-scrollbar {
+    display: none;
+  }
+
+  .Slide {
+    width: 100px;
+    padding: 2px;
+  }
+}
