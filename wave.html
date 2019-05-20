@@ -1,0 +1,62 @@
+<head>
+  <script src="watercanvas.js"></script>
+</head>
+
+<body onload="init()">
+  <div id="waterHolder"></div>
+</body>
+
+<script>
+  var width = 350;
+  var height = 275;
+
+  function init() {
+    var waterModel = new WaterModel(width, height, {
+      resolution: 2.0,
+      interpolate: false,
+      damping: 0.985,
+      clipping: 5,
+      evolveThreshold: 0.05,
+      maxFps: 30,
+      showStats: true
+    });
+    var waterCanvas = new WaterCanvas(
+      width,
+      height,
+      "waterHolder",
+      waterModel,
+      {
+        backgroundImageUrl: "images/dummy-1.jpg",
+        lightRefraction: 9.0,
+        lightReflection: 0.1,
+        maxFps: 20,
+        showStats: true
+      }
+    );
+
+    var waterCanvas = new WaterCanvas(
+      width,
+      height,
+      "waterHolder",
+      waterModel,
+      {
+        backgroundImageUrl: "images/dummy-2.jpg",
+        lightRefraction: 9.0,
+        lightReflection: 0.1,
+        maxFps: 20,
+        showStats: false
+      }
+    );
+
+    var finger = [[0.5, 1.0, 0.5], [1.0, 1.0, 1.0], [0.5, 1.0, 0.5]];
+
+    waterModel.touchWater(100, 100, 1.5, finger);
+    waterCanvas.setBackground("images/dummy-3.jpg");
+    waterModel.touchWater(100, 120, 1.5, finger);
+
+    var pixel = create2DArray(createRadialCanvas(2, 2));
+    var raindrop = create2DArray(createRadialCanvas(4, 4));
+    var finger = create2DArray(createRadialCanvas(14, 14));
+    enableMouseInteraction(waterModel, "waterHolder");
+  }
+</script>
