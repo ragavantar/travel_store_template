@@ -22,8 +22,8 @@ class WaveCarousel extends Component {
         waterCanvas.setSize(width, height);
       };
     } else {
-      width = window.innerWidth * 0.3;
-      height = window.innerHeight;
+      width = 300;//window.innerWidth * 0.3;
+      height = 700;//window.innerHeight;
     }
 
     let waterModel = new window.WaterModel(width, height, {
@@ -89,7 +89,11 @@ class WaveCarousel extends Component {
     model.touchWater(width / 2, height * 0.6, 2, finger);
     model.touchWater(width / 2, height * 0.5, 2, finger);
 
-    document.getElementById("waterHolderC").classList.add("Fade-in");
+    // setTimeout(()=>{
+      document.getElementById("waterHolderC").classList.add("Fade-in");
+      canvas.setBackground(img);
+    // }, 500);
+
   };
 
   animateMove = e => {
@@ -101,13 +105,17 @@ class WaveCarousel extends Component {
   };
 
   componentWillReceiveProps() {
-    this.changeBg(this.props.image);
+    // this.changeBg(this.props.image);
+// console.log(this.props);
   }
 
   animEnd = () => {
     document.getElementById("waterHolderC").classList.remove("Fade-in");
   };
 
+  componentWillUpdate(){
+    // console.log('up', this.props);
+  }
   render() {
     let { id, image, actions } = this.props;
     return (
@@ -117,9 +125,11 @@ class WaveCarousel extends Component {
           className="Fade-in"
           onAnimationEnd={this.animEnd}
         />
-        {/* <img src={image} key={image} className="Fade-in" alt="" /> */}
 
-        <span
+        {!(id === "initial") && (
+        <img src={image} key={image} style={{display:'none'}} onLoad={this.changeBg(image)}  alt="" />
+        )}
+        {/* <span
           className="Left-indicator Triangle-left Pointer"
           onClick={() => actions.moveSlide(-1)}
         />
@@ -127,7 +137,7 @@ class WaveCarousel extends Component {
         <span
           className="Right-indicator Triangle-right Pointer"
           onClick={() => actions.moveSlide(1)}
-        />
+        /> */}
 
         {!(id === "initial") && (
           <Link to="details" smooth={true} duration={500} offset={1}>

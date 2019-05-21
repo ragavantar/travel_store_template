@@ -45,6 +45,7 @@ class Wrapper extends Component {
   selectSlide = index => {
     let selected = this.state.data[index];
     //    let scrollDist = this.scrollLeft(index);
+
     this.setState({
       selected,
       selectedIndex: index,
@@ -72,6 +73,8 @@ class Wrapper extends Component {
       initial: false,
       sliderScrollLeft: scrollDist
     });
+
+    // console.log(this.state);
   };
 
   handleAnimation = name => {

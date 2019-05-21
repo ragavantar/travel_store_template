@@ -24,7 +24,7 @@ const HeroMobile = ({ data, slides, actions }) => {
         />
         <div className="Main-content">
           <h1 className="Title">the travel store</h1>
-          <WaveCarousel image={data.thumbnailSmall} actions={actions} />
+          <WaveCarousel id={data.id} image={data.thumbnailSmall} actions={actions} />
           <p className="Sub-Title">{data.title}</p>
           <p>
             {!(data.id === "initial") && (
