@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/travel_store_template/static/css/main.0e399be6.chunk.css",
-    "main.js": "/travel_store_template/static/js/main.1813b360.chunk.js",
-    "main.js.map": "/travel_store_template/static/js/main.1813b360.chunk.js.map",
+    "main.css": "/travel_store_template/static/css/main.d776364f.chunk.css",
+    "main.js": "/travel_store_template/static/js/main.d00b5e02.chunk.js",
+    "main.js.map": "/travel_store_template/static/js/main.d00b5e02.chunk.js.map",
     "runtime~main.js": "/travel_store_template/static/js/runtime~main.3366be80.js",
     "runtime~main.js.map": "/travel_store_template/static/js/runtime~main.3366be80.js.map",
     "static/css/2.22a7d4ef.chunk.css": "/travel_store_template/static/css/2.22a7d4ef.chunk.css",
-    "static/js/2.629fd5b3.chunk.js": "/travel_store_template/static/js/2.629fd5b3.chunk.js",
-    "static/js/2.629fd5b3.chunk.js.map": "/travel_store_template/static/js/2.629fd5b3.chunk.js.map",
+    "static/js/2.d05802f5.chunk.js": "/travel_store_template/static/js/2.d05802f5.chunk.js",
+    "static/js/2.d05802f5.chunk.js.map": "/travel_store_template/static/js/2.d05802f5.chunk.js.map",
     "index.html": "/travel_store_template/index.html",
-    "precache-manifest.fc978d79760b8ce195afd4cd9a63c8bf.js": "/travel_store_template/precache-manifest.fc978d79760b8ce195afd4cd9a63c8bf.js",
+    "precache-manifest.bb8c4c815ca3abefe1ba1d982050094d.js": "/travel_store_template/precache-manifest.bb8c4c815ca3abefe1ba1d982050094d.js",
     "service-worker.js": "/travel_store_template/service-worker.js",
     "static/css/2.22a7d4ef.chunk.css.map": "/travel_store_template/static/css/2.22a7d4ef.chunk.css.map",
-    "static/css/main.0e399be6.chunk.css.map": "/travel_store_template/static/css/main.0e399be6.chunk.css.map"
+    "static/css/main.d776364f.chunk.css.map": "/travel_store_template/static/css/main.d776364f.chunk.css.map"
   }
 }
