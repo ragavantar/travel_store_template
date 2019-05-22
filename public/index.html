@@ -21,9 +21,6 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>React App</title>
-    <script>
-      var hell = "dil";
-    </script>
   </head>
   <body onload="">
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,41 +36,12 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-
-    <script>
-      var width = 350;
-      var height = 275;
-
-      function init() {
-        var waterModel = new WaterModel(width, height, {
-          resolution: 2.0,
-          interpolate: false,
-          damping: 0.985,
-          clipping: 5,
-          evolveThreshold: 0.05,
-          maxFps: 30,
-          showStats: true
-        });
-        var waterCanvas = new WaterCanvas(
-          width,
-          height,
-          "waterHolder",
-          waterModel,
-          {
-            backgroundImageUrl: "images/dummy-1.jpg",
-            lightRefraction: 9.0,
-            lightReflection: 0.1,
-            maxFps: 20,
-            showStats: true
-          }
-        );
-
-        var finger = [[0.5, 1.0, 0.5], [1.0, 1.0, 1.0], [0.5, 1.0, 0.5]];
-
-        waterModel.touchWater(100, 100, 1.5, finger);
-        waterCanvas.setBackground("images/dummy-3.jpg");
-        waterModel.touchWater(100, 120, 1.5, finger);
-      }
-    </script>
+    <!-- <script src="/LiquidDistortion-master/js/pixi.min.js"></script>
+    <script src="/LiquidDistortion-master/js/TweenMax.min.js"></script>
+    <script src="/LiquidDistortion-master/js/main.js"></script> -->
+    <!-- githosted -->
+    <script src="/travel_store_template/LiquidDistortion-master/js/pixi.min.js"></script>
+    <script src="/travel_store_template/LiquidDistortion-master/js/TweenMax.min.js"></script>
+    <script src="/travel_store_template/LiquidDistortion-master/js/main.js"></script>
   </body>
 </html>

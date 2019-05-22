@@ -129,6 +129,12 @@ p {
   height: 100vh;
 }
 
+#canvasHolder canvas {
+  position: absolute;
+  object-fit: unset !important;
+  width: 28vw !important;
+}
+
 @media only screen and (max-width: 767px) {
   .Hero-section {
     color: white;

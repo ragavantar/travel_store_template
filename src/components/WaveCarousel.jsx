@@ -149,7 +149,6 @@ class WaveCarousel extends Component {
           className="Left-indicator Triangle-left Pointer"
           onClick={() => actions.moveSlide(-1)}
         />
-
         <span
           className="Right-indicator Triangle-right Pointer"
           onClick={() => actions.moveSlide(1)}

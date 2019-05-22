@@ -32,7 +32,7 @@ class Wrapper extends Component {
       initial: true,
       sliderScrollLeft: 0
     };
-
+    //for details component
     let slides = [];
     this.state.data.forEach(data => {
       let slide = {
@@ -42,6 +42,13 @@ class Wrapper extends Component {
       slides.push(slide);
     });
     this.state.slides = slides;
+
+    //for pixicarousel component
+    let carouselImages = [];
+    this.state.data.forEach(data => {
+      carouselImages.push(data.details.thumbnailLarge);
+    });
+    this.state.carouselImages = carouselImages;
   }
 
   selectSlide = index => {
@@ -121,6 +128,8 @@ class Wrapper extends Component {
               data={this.state.selected.details}
               slides={this.state.slides}
               actions={this.actions}
+              carouselImages={this.state.carouselImages}
+              index={this.state.selectedIndex}
             />
           </MediaQuery>
         </div>

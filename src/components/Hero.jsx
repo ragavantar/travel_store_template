@@ -8,8 +8,16 @@ import "../css/Animation.css";
 import Slide from "./Slide";
 import Carousel from "./Carousel";
 import WaveCarousel from "./WaveCarousel";
+// import PixiCarousel from "./PixiCarousel";
+const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 
-const Hero = ({ data, slides, actions }) => {
+const Loading = (
+  <div className="align-middle" style={{ color: "white" }}>
+    Loading ...
+  </div>
+);
+
+const Hero = ({ data, slides, actions, carouselImages, index }) => {
   return (
     <div className="Hero-section row" id="hero">
       <div className="Main-section col-sm-8">
@@ -45,11 +53,15 @@ const Hero = ({ data, slides, actions }) => {
         </div>
       </div>
       <div className="col-sm-4 pl-0">
-        <WaveCarousel
-          id={data.id}
-          image={data.thumbnailLarge}
-          actions={actions}
-        />
+        <React.Suspense fallback={Loading}>
+          <PixiCarousel
+            id={data.id}
+            image={data.thumbnailLarge}
+            carouselImages={carouselImages}
+            actions={actions}
+            index={index}
+          />
+        </React.Suspense>
       </div>
     </div>
   );

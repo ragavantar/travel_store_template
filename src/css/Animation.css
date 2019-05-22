@@ -1,6 +1,6 @@
 @keyframes fade-in {
   0% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   100% {
     opacity: 1;
@@ -9,7 +9,7 @@
 
 @-webkit-keyframes fade-in {
   0% {
-    opacity: 0.4;
+    opacity: 0.2;
   }
   100% {
     opacity: 1;
@@ -24,7 +24,7 @@
 }
 
 .Fade-in-long {
-  animation-duration: 3s;
+  animation-duration: 5s;
 }
 
 @keyframes slide-down {

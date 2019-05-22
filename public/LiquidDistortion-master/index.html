@@ -1,4 +1,10 @@
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script>
+      // document.documentElement.className = "js";
+    </script>
+  </head>
   <body class="">
     <script src="js/pixi.min.js"></script>
     <script src="js/TweenMax.min.js"></script>
@@ -6,7 +12,12 @@
 
     <script>
       var initCanvasSlideshow = new CanvasSlideshow({
-        sprites: ["/images/dummy-1.jpg", "img/12.jpg"],
+        sprites: [
+          "/images/dummy-1.jpg",
+          "/LiquidDistortion-master/img/12.jpg",
+          "/LiquidDistortion-master/img/1.jpg",
+          "/LiquidDistortion-master/img/2.jpg"
+        ],
         displacementImage: "img/dmaps/2048x2048/clouds.jpg",
         autoPlay: true,
         autoPlaySpeed: [10, 3],
