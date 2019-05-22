@@ -22,7 +22,7 @@ const Details = ({ title, images, animateSlideDown }) => {
           <span className="Desc">
             <p>{images[0].desc}</p>
             <p>
-              <span className="Border-bottom">Explore</span>
+              <span className="Border-bottom Explore">Explore</span>
             </p>
           </span>
         </div>

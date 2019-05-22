@@ -2,6 +2,8 @@ import React, { Component, Suspense } from "react";
 
 import MediaQuery from "react-responsive";
 
+import "../css/Fonts.css";
+
 import Data from "./data";
 
 import Hero from "./Hero";

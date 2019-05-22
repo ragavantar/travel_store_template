@@ -1,0 +1,72 @@
+/* @font-face {
+  font-family: "Mayton";
+  src: url("/fonts/Mayton/Mayton.eot");
+  src: url("/fonts/Mayton/Mayton.eot") format("embedded-opentype"),
+    url("/fonts/Mayton/Mayton.woff2") format("woff2"),
+    url("/fonts/Mayton/Mayton.woff") format("woff"),
+    url("/fonts/Mayton/Mayton.ttf") format("truetype"),
+    url("/fonts/Mayton/Mayton.svg#Mayton") format("svg");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/fonts/BebasNeue/BebasNeue.eot");
+  src: url("/fonts/BebasNeue/BebasNeue.eot") format("embedded-opentype"),
+    url("/fonts/BebasNeue/BebasNeue.woff2") format("woff2"),
+    url("/fonts/BebasNeue/BebasNeue.woff") format("woff"),
+    url("/fonts/BebasNeue/BebasNeue.ttf") format("truetype"),
+    url("/fonts/BebasNeue/BebasNeue.svg#BebasNeue") format("svg");
+} */
+/* git hosted */
+@font-face {
+  font-family: "Mayton";
+  src: url("/travel_store_template/fonts/Mayton/Mayton.eot");
+  src: url("/travel_store_template/fonts/Mayton/Mayton.eot")
+      format("embedded-opentype"),
+    url("/travel_store_template/fonts/Mayton/Mayton.woff2") format("woff2"),
+    url("/travel_store_template/fonts/Mayton/Mayton.woff") format("woff"),
+    url("/travel_store_template/fonts/Mayton/Mayton.ttf") format("truetype"),
+    url("/travel_store_template/fonts/Mayton/Mayton.svg#Mayton") format("svg");
+}
+
+@font-face {
+  font-family: "BebasNeue";
+  src: url("/travel_store_template/fonts/BebasNeue/BebasNeue.eot");
+  src: url("/travel_store_template/fonts/BebasNeue/BebasNeue.eot")
+      format("embedded-opentype"),
+    url("/travel_store_template/fonts/BebasNeue/BebasNeue.woff2")
+      format("woff2"),
+    url("/travel_store_template/fonts/BebasNeue/BebasNeue.woff") format("woff"),
+    url("/travel_store_template/fonts/BebasNeue/BebasNeue.ttf")
+      format("truetype"),
+    url("/travel_store_template/fonts/BebasNeue/BebasNeue.svg#BebasNeue")
+      format("svg");
+}
+
+* {
+  font-family: BebasNeue;
+  font-size: 18px;
+}
+
+.Title {
+  font-family: Mayton;
+  font-size: 96px;
+}
+
+.Sub-Title {
+  font-size: 30px;
+}
+
+.Explore {
+  font-size: 24px;
+}
+
+.Slide p {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 767px) {
+  .Title {
+    font-size: 60px;
+  }
+}

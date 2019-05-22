@@ -22,8 +22,8 @@ class WaveCarousel extends Component {
         waterCanvas.setSize(width, height);
       };
     } else {
-      width = 300;//window.innerWidth * 0.3;
-      height = 700;//window.innerHeight;
+      width = 300; //window.innerWidth * 0.3;
+      height = 700; //window.innerHeight;
     }
 
     let waterModel = new window.WaterModel(width, height, {
@@ -89,11 +89,20 @@ class WaveCarousel extends Component {
     model.touchWater(width / 2, height * 0.6, 2, finger);
     model.touchWater(width / 2, height * 0.5, 2, finger);
 
-    // setTimeout(()=>{
+    model.touchWater(0, height * 0.2, 2, finger);
+    model.touchWater(0, height * 0.4, 2, finger);
+    model.touchWater(0, height * 0.6, 2, finger);
+    model.touchWater(0, height * 0.5, 2, finger);
+
+    model.touchWater(width - 10, height * 0.2, 2, finger);
+    model.touchWater(width - 10, height * 0.4, 2, finger);
+    model.touchWater(width - 10, height * 0.6, 2, finger);
+    model.touchWater(width - 10, height * 0.5, 2, finger);
+
+    setTimeout(() => {
       document.getElementById("waterHolderC").classList.add("Fade-in");
       canvas.setBackground(img);
-    // }, 500);
-
+    }, 1500);
   };
 
   animateMove = e => {
@@ -106,14 +115,14 @@ class WaveCarousel extends Component {
 
   componentWillReceiveProps() {
     // this.changeBg(this.props.image);
-// console.log(this.props);
+    // console.log(this.props);
   }
 
   animEnd = () => {
     document.getElementById("waterHolderC").classList.remove("Fade-in");
   };
 
-  componentWillUpdate(){
+  componentWillUpdate() {
     // console.log('up', this.props);
   }
   render() {
@@ -124,10 +133,17 @@ class WaveCarousel extends Component {
           id="waterHolderC"
           className="Fade-in"
           onAnimationEnd={this.animEnd}
+          // onMouseMove={e => this.animateMove(e)}
         />
 
         {!(id === "initial") && (
-        <img src={image} key={image} style={{display:'none'}} onLoad={this.changeBg(image)}  alt="" />
+          <img
+            src={image}
+            key={image}
+            style={{ display: "none" }}
+            onLoad={this.changeBg(image)}
+            alt=""
+          />
         )}
         {/* <span
           className="Left-indicator Triangle-left Pointer"

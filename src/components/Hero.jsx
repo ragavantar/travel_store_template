@@ -26,7 +26,7 @@ const Hero = ({ data, slides, actions }) => {
           <p>
             {!(data.id === "initial") && (
               <Link to="details" smooth={true} duration={500} offset={1}>
-                <span className="Pointer Border-bottom">Explore</span>
+                <span className="Pointer Border-bottom Explore">Explore</span>
               </Link>
             )}
           </p>
