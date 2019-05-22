@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c826d8912f533849cf6a4f6cae530439",
+    "revision": "d0829d60af1d1a571b938e80b2f26d6e",
     "url": "/travel_store_template/index.html"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/travel_store_template/static/js/2.629fd5b3.chunk.js"
   },
   {
-    "revision": "0a928fcffc99a1b45cb9",
-    "url": "/travel_store_template/static/js/3.ffd57d57.chunk.js"
+    "revision": "58178116550169f0dfa5",
+    "url": "/travel_store_template/static/js/3.16837d72.chunk.js"
   },
   {
     "revision": "acd5f972efa78f4c855c",
     "url": "/travel_store_template/static/js/main.121e9853.chunk.js"
   },
   {
-    "revision": "626be07c48281dc0ea81",
-    "url": "/travel_store_template/static/js/runtime~main.7302f64c.js"
+    "revision": "09934a7857f04003bd6a",
+    "url": "/travel_store_template/static/js/runtime~main.e2492958.js"
   }
 ]);
