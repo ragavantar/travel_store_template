@@ -6,8 +6,8 @@ import "../css/Hero.css";
 import "../css/Animation.css";
 
 import Slide from "./Slide";
-import Carousel from "./Carousel";
-import WaveCarousel from "./WaveCarousel";
+// import Carousel from "./Carousel";
+// import WaveCarousel from "./WaveCarousel";
 // import PixiCarousel from "./PixiCarousel";
 const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 

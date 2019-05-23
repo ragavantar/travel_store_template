@@ -176,4 +176,12 @@ p {
     width: auto;
     height: auto;
   }
+
+  #canvasHolder {
+    height: 30vh;
+  }
+
+  #canvasHolder canvas {
+    width: 80% !important;
+  }
 }

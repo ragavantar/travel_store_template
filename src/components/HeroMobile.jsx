@@ -6,10 +6,13 @@ import "../css/Hero.css";
 import "../css/Animation.css";
 
 import Slide from "./Slide";
-import Carousel from "./Carousel";
-import WaveCarousel from "./WaveCarousel";
+// import Carousel from "./Carousel";
+// import WaveCarousel from "./WaveCarousel";
+const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 
-const HeroMobile = ({ data, slides, actions }) => {
+const Loading = <div style={{ color: "white" }}>Loading ...</div>;
+
+const HeroMobile = ({ data, slides, actions, carouselImages, index }) => {
   let style = {
     // marginLeft: scrollLeft
   };
@@ -24,11 +27,20 @@ const HeroMobile = ({ data, slides, actions }) => {
         />
         <div className="Main-content">
           <h1 className="Title">the travel store</h1>
-          <WaveCarousel
+          {/* <WaveCarousel
             id={data.id}
             image={data.thumbnailSmall}
             actions={actions}
-          />
+          /> */}
+          <React.Suspense fallback={Loading}>
+            <PixiCarousel
+              id={data.id}
+              image={data.thumbnailLarge}
+              carouselImages={carouselImages}
+              actions={actions}
+              index={index}
+            />
+          </React.Suspense>
           <p className="Sub-Title">{data.title}</p>
           <p>
             {!(data.id === "initial") && (

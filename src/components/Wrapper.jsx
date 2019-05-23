@@ -121,6 +121,8 @@ class Wrapper extends Component {
               data={this.state.selected.details}
               slides={this.state.slides}
               actions={this.actions}
+              carouselImages={this.state.carouselImages}
+              index={this.state.selectedIndex}
             />
           </MediaQuery>
           <MediaQuery query="(min-width: 768px)">
