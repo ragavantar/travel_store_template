@@ -242,8 +242,10 @@
           x: options.displaceScale[0],
           y: options.displaceScale[1]
         })
-        .to(slideImages[that.currentIndex], 0.5, { alpha: 0 })
-        .to(slideImages[newIndex], 0.5, { alpha: 1 })
+        .to(slideImages[that.currentIndex], 0.5, { alpha: 0.5 }, 0.5)
+        .to(slideImages[newIndex], 0.5, { alpha: 0.3 }, 0.8)
+        .to(slideImages[that.currentIndex], 0.5, { alpha: 0 }, 1)
+        .to(slideImages[newIndex], 0.5, { alpha: 1 }, 1)
         .to(displacementFilter.scale, 1, {
           x: options.displaceScaleTo[0],
           y: options.displaceScaleTo[1]

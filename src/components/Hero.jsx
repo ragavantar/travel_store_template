@@ -11,11 +11,7 @@ import WaveCarousel from "./WaveCarousel";
 // import PixiCarousel from "./PixiCarousel";
 const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 
-const Loading = (
-  <div className="align-middle" style={{ color: "white" }}>
-    Loading ...
-  </div>
-);
+const Loading = <div style={{ color: "white" }}>Loading ...</div>;
 
 const Hero = ({ data, slides, actions, carouselImages, index }) => {
   return (
