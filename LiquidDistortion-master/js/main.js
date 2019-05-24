@@ -58,6 +58,9 @@
     options.dispatchPointerOver = options.hasOwnProperty("dispatchPointerOver")
       ? options.dispatchPointerOver
       : false;
+    options.containerId = options.hasOwnProperty("containerId")
+      ? options.containerId
+      : "canvasHolder";
 
     //  PIXI VARIABLES
     /// ---------------------------
@@ -94,7 +97,7 @@
     /// ---------------------------
     this.initPixi = function() {
       // Add canvas to the HTML
-      document.getElementById("canvasHolder").appendChild(renderer.view);
+      document.getElementById(options.containerId).appendChild(renderer.view);
 
       // Add child container to the main container
       stage.addChild(slidesContainer);
@@ -464,7 +467,7 @@
 
       //4. Set the color of the HTML body background
       document.getElementById(
-        "canvasHolder"
+        options.containerId
       ).style.backgroundColor = backgroundColor;
 
       //Fix some quirkiness in scaling for Safari
