@@ -4,7 +4,7 @@ const Slide = ({ index, id, image, actions, selected }) => {
   return (
     <div
       className={"Slide Pointer " + selected}
-      onClick={() => actions.selectSlide(index)}
+      onMouseOver={() => actions.selectSlide(index)}
     >
       <div>
         <img src={image} alt={id} />

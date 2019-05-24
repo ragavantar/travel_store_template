@@ -49,6 +49,12 @@ class Wrapper extends Component {
       carouselImages.push(data.details.thumbnailLarge);
     });
     this.state.carouselImages = carouselImages;
+
+    let bgImages = [];
+    this.state.data.forEach(data => {
+      bgImages.push(data.details.background);
+    });
+    this.state.bgImages = bgImages;
   }
 
   selectSlide = index => {
@@ -131,6 +137,7 @@ class Wrapper extends Component {
               slides={this.state.slides}
               actions={this.actions}
               carouselImages={this.state.carouselImages}
+              bgImages={this.state.bgImages}
               index={this.state.selectedIndex}
             />
           </MediaQuery>

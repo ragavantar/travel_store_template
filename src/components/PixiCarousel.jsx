@@ -90,12 +90,6 @@ class PixiCarousel extends Component {
             alt=""
           />
         )}
-
-        {!(id === "initial") && (
-          <Link to="details" smooth={true} duration={500} offset={1}>
-            <p className="Pointer Explore">EXPLORE</p>
-          </Link>
-        )}
       </div>
     );
   }
