@@ -2,9 +2,9 @@
   "files": {
     "static/js/0.7c6937cc.chunk.js": "/travel_store_template/static/js/0.7c6937cc.chunk.js",
     "static/js/0.7c6937cc.chunk.js.map": "/travel_store_template/static/js/0.7c6937cc.chunk.js.map",
-    "main.css": "/travel_store_template/static/css/main.e7656c7f.chunk.css",
-    "main.js": "/travel_store_template/static/js/main.0371eb32.chunk.js",
-    "main.js.map": "/travel_store_template/static/js/main.0371eb32.chunk.js.map",
+    "main.css": "/travel_store_template/static/css/main.0b2c71a9.chunk.css",
+    "main.js": "/travel_store_template/static/js/main.f9125306.chunk.js",
+    "main.js.map": "/travel_store_template/static/js/main.f9125306.chunk.js.map",
     "runtime~main.js": "/travel_store_template/static/js/runtime~main.ac85af97.js",
     "runtime~main.js.map": "/travel_store_template/static/js/runtime~main.ac85af97.js.map",
     "static/css/3.22a7d4ef.chunk.css": "/travel_store_template/static/css/3.22a7d4ef.chunk.css",
@@ -16,10 +16,10 @@
     "static/js/5.5c5ca3cb.chunk.js": "/travel_store_template/static/js/5.5c5ca3cb.chunk.js",
     "static/js/5.5c5ca3cb.chunk.js.map": "/travel_store_template/static/js/5.5c5ca3cb.chunk.js.map",
     "index.html": "/travel_store_template/index.html",
-    "precache-manifest.057a49073cf1dfe25a243f51591016b8.js": "/travel_store_template/precache-manifest.057a49073cf1dfe25a243f51591016b8.js",
+    "precache-manifest.c3f8e77b7210c96bcf9933f16d375df4.js": "/travel_store_template/precache-manifest.c3f8e77b7210c96bcf9933f16d375df4.js",
     "service-worker.js": "/travel_store_template/service-worker.js",
     "static/css/3.22a7d4ef.chunk.css.map": "/travel_store_template/static/css/3.22a7d4ef.chunk.css.map",
     "static/css/5.45e15af3.chunk.css.map": "/travel_store_template/static/css/5.45e15af3.chunk.css.map",
-    "static/css/main.e7656c7f.chunk.css.map": "/travel_store_template/static/css/main.e7656c7f.chunk.css.map"
+    "static/css/main.0b2c71a9.chunk.css.map": "/travel_store_template/static/css/main.0b2c71a9.chunk.css.map"
   }
 }
