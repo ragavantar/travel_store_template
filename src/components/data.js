@@ -4,7 +4,7 @@ const Data = [
       id: "Beaches",
       title: "The Beaches",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will take time to ge to a point where it can make it through the first mile without making you short of breath.",
       thumbnailSmall: "images/left_image_1.jpg",
       thumbnailLarge: "images/2.jpg",
       background: "images/left_image_1.jpg"
@@ -57,7 +57,7 @@ const Data = [
       id: "Safari",
       title: "The Safari",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will tae time to get to a point where it can make it through the first mile without making you short of breath.",
       thumbnailSmall: "images/left_image_2.jpg",
       thumbnailLarge: "images/1.jpg",
       background: "images/left_image_2.jpg"
@@ -110,7 +110,7 @@ const Data = [
       id: "Cities",
       title: "The Cities",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will take time to get to a point where it can make it trough the first mile without making you short of breath.",
       thumbnailSmall: "images/left_image_3.jpg",
       thumbnailLarge: "images/11.jpg",
       background: "images/left_image_3.jpg"

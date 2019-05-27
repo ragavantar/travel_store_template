@@ -189,8 +189,10 @@ p {
     width: 80% !important;
   }
 
+  #bgCanvas {
+    height: 100vh;
+  }
   #bgCanvas canvas {
-    position: fixed;
     width: 100% !important;
   }
 }

@@ -60,7 +60,9 @@ const HeroMobile = ({
               containerId="canvasHolder"
             />
           </React.Suspense>
-          <p className="Sub-Title">{data.title}</p>
+          <p className="Sub-Title Fade-in" key={data.title}>
+            {data.title}
+          </p>
           <p>
             {!(data.id === "initial") && (
               <Link to="details" smooth={true} duration={500}>
