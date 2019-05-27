@@ -9,6 +9,7 @@ class PixiCarousel extends Component {
     this.state.images = this.props.carouselImages;
     this.state.animating = false;
     this.state.next = -1;
+    this.state.prev = 0;
   }
 
   componentDidMount() {
@@ -35,6 +36,7 @@ class PixiCarousel extends Component {
     };
   }
 
+  //old logic
   changeBg = (ind, img) => {
     //    console.log(ind, this.state.images[ind]);
 
@@ -52,6 +54,7 @@ class PixiCarousel extends Component {
       //   state.animating = true;
       //   return null;
       // });
+      this.setState({ prev: ind });
       this.state.animating = true;
       this.state.canvas.moveSlider(ind);
 
@@ -80,11 +83,31 @@ class PixiCarousel extends Component {
       // console.log(this.state.next);
     }
   };
+
+  changeBgInd = ind => {
+    this.setState({ nextInd: ind, changeTimer: 2500 });
+  };
   render() {
     let { id, image, actions, index } = this.props;
     // if (this.state.animating === false && this.state.next > -1)
     //   this.changeBg(index, image);
     // console.log("render", this.state.next);
+    // console.log(this.state.nextInd, this.state.changeTimer);
+    let left = 1; // sec wait
+    //this.state.changeTimer;
+    // console.log("in", index, this.props.containerId);
+    let timer = setInterval(() => {
+      left -= 1;
+      if (left === 0) {
+        clearInterval(timer);
+        // console.log(index, this.state.nextInd, "end");
+        if (index === this.state.nextInd) {
+          // this.changeBg(index);
+          this.state.canvas.moveSlider(index);
+          // console.log("got it", index);
+        }
+      }
+    }, 1000);
     return (
       <div className="Carousel-section">
         <div id={this.props.containerId} />
@@ -95,7 +118,7 @@ class PixiCarousel extends Component {
             key={index}
             style={{ display: "none" }}
             // style={{ opacity: "0.1" }}
-            onLoad={this.changeBg(index, image)}
+            onLoad={() => this.changeBgInd(index)}
             alt=""
           />
         )}

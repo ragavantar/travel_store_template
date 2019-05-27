@@ -163,7 +163,7 @@ const Data = [
       id: "Islands",
       title: "The Islands",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will take time to get to point where it can make it through the first mile without making you short of breath.",
       thumbnailSmall: "images/dummy-5.jpg",
       thumbnailLarge: "images/13.jpg",
       background: "images/left_image_1.jpg"
@@ -216,7 +216,7 @@ const Data = [
       id: "Mountains",
       title: "The Mountains",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will take time to get to a point where i can make it through the first mile without making you short of breath.",
       thumbnailSmall: "images/thumbnail_suitcase.jpg",
       thumbnailLarge: "images/14.jpg",
       background: "images/left_image_2.jpg"
@@ -428,7 +428,7 @@ const Data = [
       id: "Islands1",
       title: "The Islands1",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your body will take time to get to a point where it can makeit through the first mile without making you short of breath.",
       thumbnailSmall: "images/thumbnail_suitcase.jpg",
       thumbnailLarge: "images/14.jpg",
       background: "images/left_image_1.jpg"
@@ -534,7 +534,7 @@ const Data = [
       id: "Cities2",
       title: "The Cities2",
       description:
-        "your body will take time to get to a point where it can make it through the first mile without making you short of breath.",
+        "your boy will take time to get to a point where it can make it through the first mile without making you short of breath.",
       thumbnailSmall: "images/thumbnail_suitcase.jpg",
       thumbnailLarge: "images/13.jpg",
       background: "images/left_image_3.jpg"
