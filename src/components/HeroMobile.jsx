@@ -12,19 +12,37 @@ const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 
 const Loading = <div style={{ color: "white" }}>Loading ...</div>;
 
-const HeroMobile = ({ data, slides, actions, carouselImages, index }) => {
+const HeroMobile = ({
+  data,
+  slides,
+  actions,
+  carouselImages,
+  bgImages,
+  index
+}) => {
   let style = {
     // marginLeft: scrollLeft
   };
   return (
     <div className="Hero-section" id="hero">
       <div className="Main-section">
-        <img
+        {/* <img
           src={data.background}
           key={data.background}
           className="Fade-in Fade-in-long"
           alt={data.title}
-        />
+        /> */}
+        <React.Suspense fallback={Loading}>
+          <PixiCarousel
+            id={data.id}
+            image={data.background}
+            carouselImages={bgImages}
+            // carouselImages={carouselImages}
+            actions={actions}
+            index={index}
+            containerId="bgCanvas"
+          />
+        </React.Suspense>
         <div className="Main-content">
           <h1 className="Title">the travel store</h1>
           {/* <WaveCarousel
@@ -39,6 +57,7 @@ const HeroMobile = ({ data, slides, actions, carouselImages, index }) => {
               carouselImages={carouselImages}
               actions={actions}
               index={index}
+              containerId="canvasHolder"
             />
           </React.Suspense>
           <p className="Sub-Title">{data.title}</p>

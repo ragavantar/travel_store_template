@@ -59,37 +59,12 @@ class Wrapper extends Component {
 
   selectSlide = index => {
     let selected = this.state.data[index];
-    //    let scrollDist = this.scrollLeft(index);
 
     this.setState({
       selected,
       selectedIndex: index,
       initial: false
-      //    sliderScrollLeft: scrollDist
     });
-  };
-
-  moveSlide = val => {
-    if (this.state.initial) val = 0;
-    //let next = (this.state.selectedIndex + val) % 13;
-    let current = this.state.selectedIndex;
-    let len = this.state.data.length - 1;
-    let next = current + val;
-    if (current === len && val === 1) next = 0;
-    else if (current === 0 && val === -1) next = len;
-
-    let nextSlide = this.state.data[next];
-
-    let scrollDist = this.scrollLeft(next);
-
-    this.setState({
-      selected: nextSlide,
-      selectedIndex: next,
-      initial: false,
-      sliderScrollLeft: scrollDist
-    });
-
-    // console.log(this.state);
   };
 
   handleAnimation = name => {
@@ -101,17 +76,7 @@ class Wrapper extends Component {
   };
 
   actions = {
-    selectSlide: this.selectSlide,
-    moveSlide: this.moveSlide
-  };
-
-  scrollLeft = slide => {
-    let dist = slide * 100;
-    let max = -1400 + window.innerWidth;
-    let left = dist < max ? max : dist;
-    document.getElementsByClassName("Slides")[0].scrollLeft = left;
-
-    return dist < max ? max : dist;
+    selectSlide: this.selectSlide
   };
 
   render() {
@@ -128,6 +93,7 @@ class Wrapper extends Component {
               slides={this.state.slides}
               actions={this.actions}
               carouselImages={this.state.carouselImages}
+              bgImages={this.state.bgImages}
               index={this.state.selectedIndex}
             />
           </MediaQuery>

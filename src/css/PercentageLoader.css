@@ -1,0 +1,32 @@
+.Loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 25;
+  background: white;
+}
+
+.Loader p {
+  width: auto;
+  border: 2px solid dodgerblue;
+  border-radius: 50%;
+  animation-name: ripple;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes ripple {
+  0% {
+    padding: 10px;
+  }
+  100% {
+    padding: 100px;
+    border-color: white;
+  }
+}

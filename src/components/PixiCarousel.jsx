@@ -12,18 +12,27 @@ class PixiCarousel extends Component {
   }
 
   componentDidMount() {
-    let initCanvasSlideshow = new window.CanvasSlideshow({
-      sprites: this.state.images,
-      displacementImage:
-        "/travel_store_template/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
-      // "/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
-      autoPlay: true,
-      autoPlaySpeed: [10, 3],
-      displaceScale: [200, 70],
-      fullscreen: false
-    });
+    var image = new Image();
+    image.src = this.state.images[0];
+    image.onload = () => {
+      // console.log(image.width, image.height);
 
-    this.setState({ canvas: initCanvasSlideshow });
+      let initCanvasSlideshow = new window.CanvasSlideshow({
+        sprites: this.state.images,
+        displacementImage:
+          "/travel_store_template/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
+        // "/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
+        autoPlay: true,
+        autoPlaySpeed: [10, 3],
+        displaceScale: [200, 70],
+        fullscreen: false,
+        containerId: this.props.containerId,
+        stageWidth: image.width,
+        stageHeight: image.height
+      });
+
+      this.setState({ canvas: initCanvasSlideshow });
+    };
   }
 
   changeBg = (ind, img) => {
@@ -37,7 +46,7 @@ class PixiCarousel extends Component {
     //   canvas.height = image.height;
     // };
     if (this.state.animating === false) {
-      console.log("now starting", ind);
+      // console.log("now starting", ind);
       // this.setState({ animating: true });
       // this.setState((state, props) => {
       //   state.animating = true;
@@ -52,7 +61,7 @@ class PixiCarousel extends Component {
         if (this.state.next > -1) {
           let n = this.state.next;
           this.state.next = -1;
-          console.log("end", n);
+          // console.log("end", n);
           this.state.canvas.moveSlider(n);
           this.changeBg(n);
         }
@@ -66,19 +75,19 @@ class PixiCarousel extends Component {
       //   2500
       // );
     } else {
-      console.log("running", this.state.animating);
+      // console.log("running", this.state.animating);
       this.state.next = ind;
-      console.log(this.state.next);
+      // console.log(this.state.next);
     }
   };
   render() {
     let { id, image, actions, index } = this.props;
     // if (this.state.animating === false && this.state.next > -1)
     //   this.changeBg(index, image);
-    console.log("render", this.state.next);
+    // console.log("render", this.state.next);
     return (
       <div className="Carousel-section">
-        <div id="canvasHolder" />
+        <div id={this.props.containerId} />
 
         {!(id === "initial") && (
           <img

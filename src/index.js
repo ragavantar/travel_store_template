@@ -4,14 +4,20 @@ import "./index.css";
 // import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 
+import PercentageLoader from "./components/PercentageLoader";
+
 const App = React.lazy(() => import("./App"));
 
 const Loading = <div style={{ color: "gray" }}>Loading ...</div>;
 
 ReactDOM.render(
-  <React.Suspense fallback={Loading}>
-    <App />
-  </React.Suspense>,
+  <div>
+    <PercentageLoader>
+      <React.Suspense fallback={Loading}>
+        <App />
+      </React.Suspense>
+    </PercentageLoader>
+  </div>,
   document.getElementById("root")
 );
 
