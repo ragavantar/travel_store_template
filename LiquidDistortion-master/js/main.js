@@ -105,7 +105,7 @@
       // Enable Interactions
       stage.interactive = true;
 
-      console.log(renderer.view.style);
+      // console.log(renderer.view.style);
 
       // Fit renderer to the screen
       if (options.fullScreen === true) {
