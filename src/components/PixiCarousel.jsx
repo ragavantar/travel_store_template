@@ -20,8 +20,8 @@ class PixiCarousel extends Component {
       let initCanvasSlideshow = new window.CanvasSlideshow({
         sprites: this.state.images,
         displacementImage:
-          "/travel_store_template/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
-        // "/LiquidDistortion-master/img/dmaps/2048x2048/clouds.jpg",
+          "/travel_store_template/LiquidDistortion-master/img/clouds.jpg",
+        // "/LiquidDistortion-master/img/clouds.jpg",
         autoPlay: true,
         autoPlaySpeed: [10, 3],
         displaceScale: [200, 70],
