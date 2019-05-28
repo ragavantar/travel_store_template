@@ -34,10 +34,10 @@ const Hero = ({ data, slides, actions, carouselImages, bgImages, index }) => {
         </React.Suspense>
         <div className="Main-content">
           <h1 className="Title">the travel store</h1>
-          <p className="Sub-Title Fade-in" key={data.title}>
+          <p className="Sub-Title Slide-left" key={data.title}>
             {data.title}
           </p>
-          <p className="Fade-in" key={data.description}>
+          <p className="Slide-right" key={data.description}>
             {data.description}
           </p>
 

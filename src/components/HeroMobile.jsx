@@ -20,9 +20,6 @@ const HeroMobile = ({
   bgImages,
   index
 }) => {
-  let style = {
-    // marginLeft: scrollLeft
-  };
   return (
     <div className="Hero-section" id="hero">
       <div className="Main-section">
@@ -60,7 +57,7 @@ const HeroMobile = ({
               containerId="canvasHolder"
             />
           </React.Suspense>
-          <p className="Sub-Title Fade-in" key={data.title}>
+          <p className="Sub-Title Fade-in-long" key={data.title}>
             {data.title}
           </p>
           <p>

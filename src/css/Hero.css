@@ -137,12 +137,12 @@ p {
 }
 
 .Divider {
-  width: 25px;
+  width: 30px;
   height: 100vh;
   background: black;
   position: absolute;
   z-index: 20;
-  left: 64%;
+  left: 65%;
 }
 
 @media only screen and (max-width: 767px) {

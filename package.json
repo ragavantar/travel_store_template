@@ -5,7 +5,6 @@
   "homepage": "https://ragavantar.github.io/travel_store_template/",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "pixi.js": "^5.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-responsive": "^6.1.2",
