@@ -19,7 +19,7 @@ class PercentageLoader extends Component {
       timer = setInterval(() => {
         status += 1;
         this.setState({ status });
-        if (status == 100) {
+        if (status === 100) {
           clearInterval(timer);
           this.setState({ completed: true });
         }
@@ -28,16 +28,6 @@ class PercentageLoader extends Component {
   render() {
     return (
       <React.Fragment>
-        {/* {this.state.completed ? (
-          this.props.children
-        ) : (
-          <div>
-            <div className="Loader">
-              <p>{this.state.status}%</p>
-            </div>
-          </div>
-        )} */}
-
         {!this.state.completed && (
           <div className="Loader">
             <p>{this.state.status}%</p>

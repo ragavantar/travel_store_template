@@ -6,8 +6,7 @@ import "../css/Hero.css";
 import "../css/Animation.css";
 
 import Slide from "./Slide";
-// import Carousel from "./Carousel";
-// import WaveCarousel from "./WaveCarousel";
+
 const PixiCarousel = React.lazy(() => import("./PixiCarousel"));
 
 const Loading = <div style={{ color: "white" }}>Loading ...</div>;
@@ -23,18 +22,11 @@ const HeroMobile = ({
   return (
     <div className="Hero-section" id="hero">
       <div className="Main-section">
-        {/* <img
-          src={data.background}
-          key={data.background}
-          className="Fade-in Fade-in-long"
-          alt={data.title}
-        /> */}
         <React.Suspense fallback={Loading}>
           <PixiCarousel
             id={data.id}
             image={data.background}
             carouselImages={bgImages}
-            // carouselImages={carouselImages}
             actions={actions}
             index={index}
             containerId="bgCanvas"
@@ -42,11 +34,7 @@ const HeroMobile = ({
         </React.Suspense>
         <div className="Main-content">
           <h1 className="Title">the travel store</h1>
-          {/* <WaveCarousel
-            id={data.id}
-            image={data.thumbnailSmall}
-            actions={actions}
-          /> */}
+
           <React.Suspense fallback={Loading}>
             <PixiCarousel
               id={data.id}

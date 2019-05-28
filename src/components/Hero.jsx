@@ -15,18 +15,11 @@ const Hero = ({ data, slides, actions, carouselImages, bgImages, index }) => {
   return (
     <div className="Hero-section row" id="hero">
       <div className="Main-section col-sm-8">
-        {/* <img
-          src={data.background}
-          key={data.background}
-          className="Fade-in Fade-in-long"
-          alt={data.title}
-        /> */}
         <React.Suspense fallback={Loading}>
           <PixiCarousel
             id={data.id}
             image={data.background}
             carouselImages={bgImages}
-            // carouselImages={carouselImages}
             actions={actions}
             index={index}
             containerId="bgCanvas"
