@@ -210,6 +210,14 @@
       });
     }
 
+    this.stopTicker = () => {
+      ticker.stop();
+    };
+
+    this.startTicker = () => {
+      ticker.start();
+    };
+
     /// ---------------------------
     //  TRANSITION BETWEEN SLIDES
     /// ---------------------------

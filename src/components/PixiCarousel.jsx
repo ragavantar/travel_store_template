@@ -9,6 +9,7 @@ class PixiCarousel extends Component {
     this.state.animating = false;
     this.state.next = -1;
     this.state.prev = 0;
+    this.state.idle = false;
   }
 
   componentDidMount() {
@@ -20,8 +21,8 @@ class PixiCarousel extends Component {
       let initCanvasSlideshow = new window.CanvasSlideshow({
         sprites: this.state.images,
         displacementImage:
-          "/travel_store_template/LiquidDistortion-master/img/clouds.jpg",
-        // "/LiquidDistortion-master/img/clouds.jpg",
+          // "/travel_store_template/LiquidDistortion-master/img/clouds.jpg",
+          "/LiquidDistortion-master/img/clouds.jpg",
         autoPlay: true,
         autoPlaySpeed: [10, 3],
         displaceScale: [200, 70],
@@ -31,8 +32,26 @@ class PixiCarousel extends Component {
         stageHeight: image.height
       });
 
+      // initCanvasSlideshow.stopTicker();
+
       this.setState({ canvas: initCanvasSlideshow });
     };
+
+    // this.checkIdle();
+
+    // document
+    //   .getElementsByClassName("Slides")[0]
+    //   .addEventListener("mouseleave", () => {
+    //     this.setState({ idle: true });
+    //     setTimeout(() => this.state.canvas.stopTicker(), 5000);
+    //   });
+
+    // document
+    //   .getElementsByClassName("Slides")[0]
+    //   .addEventListener("mouseenter", () => {
+    //     this.setState({ idle: false });
+    //     this.state.canvas.startTicker();
+    //   });
   }
 
   //old logic
@@ -68,7 +87,6 @@ class PixiCarousel extends Component {
           this.changeBg(n);
         }
       }, 2500);
-
       // setTimeout(
       //   () =>
       //     this.setState((state, props) => ({
@@ -84,10 +102,15 @@ class PixiCarousel extends Component {
   };
 
   changeBgInd = ind => {
+    // if (this.state.idle) {
+    // this.state.canvas.startTicker();
+    //   this.setState({ idle: false });
+    // }
     this.setState({ nextInd: ind, changeTimer: 2500 });
   };
   render() {
     let { id, image, actions, index } = this.props;
+
     // if (this.state.animating === false && this.state.next > -1)
     //   this.changeBg(index, image);
     // console.log("render", this.state.next);
@@ -103,10 +126,25 @@ class PixiCarousel extends Component {
         if (index === this.state.nextInd) {
           // this.changeBg(index);
           this.state.canvas.moveSlider(index);
-          // console.log("got it", index);
         }
       }
     }, 1000);
+
+    // setTimeout(
+    //   () =>
+    //     index === this.state.nextInd ? this.state.canvas.stopTicker() : "",
+    //   10000
+    // );
+    // let iTime = 5;
+    // let iTimer = setInterval(() => {
+    //   iTime -= 1;
+    //   if (iTime === 0) {
+    //     clearInterval(iTimer);
+    //     if (index === this.state.nextInd) this.state.canvas.stopTicker();
+    //     // console.log("make i", this.state.canvas);
+    //   }
+    // }, 1000);
+
     return (
       <div className="Carousel-section">
         <div id={this.props.containerId} />

@@ -85,7 +85,6 @@ class Wrapper extends Component {
         className={this.state.animating}
         onAnimationEnd={e => this.handleAnimation(e.animationName)}
       >
-        <div id="waterHolder" />
         <div className={this.state.animating === "" ? "" : "Slide-down"}>
           <MediaQuery query="(max-width:767px)">
             <HeroMobile

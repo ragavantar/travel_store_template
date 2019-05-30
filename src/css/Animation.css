@@ -98,9 +98,9 @@
 
 .Slide-left {
   -webkit-animation-name: slide-left; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: slide-left;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 @keyframes slide-right {
@@ -127,7 +127,7 @@
 
 .Slide-right {
   -webkit-animation-name: slide-right; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 3s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   animation-name: slide-right;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
