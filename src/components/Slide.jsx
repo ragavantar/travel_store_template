@@ -14,4 +14,4 @@ const Slide = ({ index, id, image, actions, selected }) => {
   );
 };
 
-export default Slide;
+export default React.memo(Slide);
